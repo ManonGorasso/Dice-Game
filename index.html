@@ -1,18 +1,79 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- My CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css-style/style.css">
     <!-- Favicon link -->
-    <link rel="shortcut icon" href="./Images/favicon.svg" type="image/svg">
-    <title>Document</title>
-    <meta name="description" 
-        content="">
+    <link rel="shortcut icon" href="./Images/Icones/Favicon.svg" type="image/svg">
+    <title>Jeu de dé</title>
+    <meta name="description" content="Jouez à notre jeu de dé, où le premier joueur à 100 points remporte la partie !">
 </head>
+
 <body>
-    
+    <main>
+        <!-- Bouton pour lancer une nouvelle partie -->
+        <button>
+            <img src="./Images/Icones/NEW GAME ICON.svg" alt="new-game-icon">
+            <p>NEW GAME</p>
+        </button>
+        <!-- Bouton lancer de dé -->
+        <button>
+            <img src="./Images/Icones/ROLL DICE ICON.svg" alt="roll-dice-icon">
+            <p>ROLL DICE</p>
+        </button>
+        <!-- Bouton sauvegarder score -->
+        <button>
+            <img src="./Images/Icones/HOLD ICON.svg" alt="hold-icon">
+            <p>HOLD</p>
+        </button>
+
+        <!-- Visuel du lancer de dé -->
+        <img src="./Images/Dé/DICE 0.svg" alt="lancer-dé-0">
+
+
+        <!-- Eléments Joueur 1 -->
+        <div>
+            <h2>PLAYER 1</h2>
+            <img src="./Images/Icones/Active-player-icon.svg" alt="active-player-icon">
+        </div>
+
+        <!-- Score global -->
+        <div>0</div>
+
+        <!-- Score du round -->
+        <div>
+            <div>
+                <h3>CURRENT</h3>
+                <p>0</p>
+            </div>
+        </div>
+
+        <!-- Eléments joueur 2 -->
+        <div>
+            <h2>PLAYER 2</h2>
+            <img src="./Images/Icones/Active-player-icon.svg" alt="active-player-icon">
+        </div>
+
+        <!-- Score global -->
+        <div>0</div>
+
+        <!-- Score du round -->
+        <div>
+            <div>
+                <h3>CURRENT</h3>
+                <p>0</p>
+            </div>
+        </div>
+
+        <!-- Bouton règles du jeu -->
+        <button>RULES</button>
+    </main>
+
+    <script src="./js-script/script.js"></script>
 </body>
+
 </html>
