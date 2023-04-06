@@ -1,0 +1,44 @@
+/* Style boutons */
+.btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 8px;
+    margin: 0.5rem;
+    border: solid 1px rgba(255, 255, 255, 0);
+    background: none; 
+    font-size: 1.2rem; 
+}
+
+.btn > img {
+    height: 2rem;
+    width: 2rem;
+    margin-right: 0.75em;
+}
+
+.btn:hover {
+    cursor: pointer;
+    border-radius: 1em;
+    border: solid 1px rgb(255, 146, 146);
+    background-color: rgba(255, 146, 146,0.10);
+}
+
+.btn:disabled {
+    color: rgb(150, 150, 150);
+    pointer-events: none;
+}
+
+.rules-btn {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.rules-btn:hover {
+    cursor: pointer;
+    color:  rgb(240, 100, 100);
+}

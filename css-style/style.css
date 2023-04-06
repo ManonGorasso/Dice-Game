@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+/* style pour smartphone - mode par DEFAUT - grille verticale */
+* {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 12px;     
+    color: rgb(75,75,75);
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 1rem;          
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url("../Images/Background/Wood-texture-vertical.jpg");   
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main {
+    background-image: url("../Images/Background/Game-background-vertical.svg");   
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 10px 10px 20px rgba(75,75,75,0.75);
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(10.5rem ,calc((100vw - 2rem) /2)));   
+    grid-template-rows: repeat(8, minmax(6rem, calc((100vh - 2rem) /8)));       
+    grid-template-areas:                                                        
+    "NG-btn NG-btn"
+    "p1-id p1-id"
+    "p1-GS p1-CS"
+    "dice commands"
+    "dice commands"
+    "p2-GS p2-CS"
+    "p2-id p2-id"
+    "rules rules";
+}
+
+/* Position des éléments dans la grille */
+.new-game-btn {
+    grid-area: NG-btn;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player1-id {
+    grid-area: p1-id;
+}
+
+.player2-id {
+    grid-area: p2-id;
+}
+
+.player1-id,
+.player2-id {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.active {
+    font-weight: 400;
+}
+
+#active-icon {
+    margin: 0px 1rem;
+    height: 1.5rem;
+}
+
+.player1-global-score {
+    grid-area: p1-GS;
+}
+
+.player2-global-score {
+    grid-area: p2-GS;
+}
+
+.player1-global-score,
+.player2-global-score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:  rgb(240, 100, 100);
+    font-size: 5.5rem;
+}
+
+.dice {
+    grid-area: dice;
+    display: flex;
+    justify-content: center;
+}
+.dice > img {
+    width: 12rem;
+    height: auto;
+}
+
+.player1-current-score {
+    grid-area: p1-CS;
+}
+
+.player2-current-score {
+    grid-area: p2-CS;
+}
+
+.player1-current-score,
+.player2-current-score {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.current-score-box {
+    background-color: rgb(240, 100, 100);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: fit-content;
+    width: fit-content;
+}
+
+h3,
+.current-score-box > span {
+    margin: 0.5rem 2.5rem;
+}
+
+h3 {
+    font-weight: 400;
+}
+
+.current-score-box > span {
+    color: white;
+    font-size: 2.5rem;
+}
+
+.commands {
+    grid-area: commands;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.rules {
+    grid-area: rules;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* changement taille de police pour tablette */
+@media screen and (min-width: 700px) and (orientation: portrait) {
+    * {
+        font-size: 20px;
+    }
+}
+
+/* changement pour grille horizontale (laptop - dekstop) */
+@media screen and (min-width: 600px) and (orientation:landscape) {
+    * {
+        font-size: 12px;
+    }
+
+    body {
+        background-image: url("../Images/Background/Wood-texture-horizontal.jpg");
+    }
+
+    main {
+        background-image: url("../Images/Background/Game-background-horizontal.svg");
+    
+        display: grid;
+        grid-template-columns: repeat(12, minmax(4rem ,calc((100vw - 2rem) /12)));
+        grid-template-rows: repeat(6, minmax(6.5rem, calc((100vh - 2rem) /6)));
+        grid-template-areas: 
+        ". . . . NG-btn NG-btn NG-btn NG-btn . . . ."
+        ". p1-id p1-id p1-id p1-id dice dice p2-id p2-id p2-id p2-id ."
+        ". p1-GS p1-GS p1-GS p1-GS dice dice p2-GS p2-GS p2-GS p2-GS ."
+        ". . . . . dice dice . . . . ."
+        ". p1-CS p1-CS p1-CS p1-CS commands commands p2-CS p2-CS p2-CS p2-CS ."
+        ". . . . rules rules rules rules . . . .";
+    }
+
+    .current-score-box > span {
+        font-size: 3rem;
+    }
+}
+
+/* changement taille de police pour grand écran */
+@media screen and (min-width: 800px) and (orientation: landscape) {
+    * {
+        font-size: 16px;
+    }
+}
