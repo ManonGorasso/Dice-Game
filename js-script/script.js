@@ -84,5 +84,14 @@ function displayScore () {
     globalScore2.innerText = player2.globalScore;
 }
 
+function animateDice () {
+    diceImage.classList.add('dice-roll-animation');
+
+    setTimeout(() => {
+        diceImage.classList.remove('dice-roll-animation');
+      }, 500);
+}
+
 newGame.addEventListener('click', restart);
 rollDice.addEventListener('click', roll);
+rollDice.addEventListener('click', animateDice);
