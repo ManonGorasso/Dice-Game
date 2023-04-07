@@ -18,7 +18,7 @@
     <main>
         <!-- Bouton pour lancer une nouvelle partie -->
         <div class="new-game-btn">
-            <button class="btn">
+            <button id="new-game-btn" class="btn">
                 <img src="./Images/Icones/NEW GAME ICON.svg" alt="new-game-icon">
                 NEW GAME
             </button>
@@ -26,53 +26,53 @@
 
         <!-- Visuel du lancer de dé -->
         <div class="dice">
-            <img src="./Images/Dé/DICE 0.svg" alt="lancer-dé-0">
+            <img id="dice" src="./Images/Dé/DICE 0.svg" alt="lancer-dé-0">
         </div>
 
         <!-- Groupe boutons de jeu -->
         <div class="commands">
             <!-- Bouton lancer de dé -->
-            <button class="btn">
-                <img src="./Images/Icones/ROLL DICE ICON.svg" alt="roll-dice-icon">
+            <button id="roll-dice-btn" class="btn">
+                <img id="roll-dice-icon" src="./Images/Icones/ROLL DICE ICON.svg" alt="roll-dice-icon">
                 ROLL DICE
             </button>
             <!-- Bouton sauvegarder score -->
-            <button class="btn">
-                <img src="./Images/Icones/HOLD ICON.svg" alt="hold-icon">
+            <button id="hold-btn" class="btn">
+                <img id="hold-icon" src="./Images/Icones/HOLD ICON.svg" alt="hold-icon">
                 HOLD
             </button>
         </div>
 
         <!-- Eléments Joueur 1 -->
         <div class="player1-id">
-            <h2 class="active">PLAYER 1</h2>
+            <h2 id="player1" class="active">PLAYER 1</h2>
             <img id= "active-icon" src="./Images/Icones/Active-player-icon.svg" alt="active-player-icon">
         </div>
 
         <!-- Score global -->
-        <span class="player1-global-score">0</span>
+        <span id="global-score-player1" class="player1-global-score">0</span>
 
         <!-- Score du round -->
         <div class="player1-current-score">
             <div class="current-score-box">
                 <h3>ROUND</h3>
-                <span>0</span>
+                <span id="current-score-player1">0</span>
             </div>
         </div>
 
         <!-- Eléments joueur 2 -->
         <div class="player2-id">
-            <h2 class="">PLAYER 2</h2>
+            <h2 id="player2" class="">PLAYER 2</h2>
         </div>
 
         <!-- Score global -->
-        <span class="player2-global-score">0</span>
+        <span id="global-score-player2" class="player2-global-score">0</span>
 
         <!-- Score du round -->
         <div class="player2-current-score">
             <div class="current-score-box">
                 <h3>ROUND</h3>
-                <span>0</span>
+                <span id="current-score-player2">0</span>
             </div>
         </div>
 
