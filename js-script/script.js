@@ -8,7 +8,7 @@ const holdIcon = document.getElementById('hold-icon');
 // gestion du dé
 let diceImage = document.getElementById('dice');
 const imgArray = ['./Images/Dé/DICE 0.svg', './Images/Dé/DICE 1.svg', './Images/Dé/DICE 2.svg', './Images/Dé/DICE 3.svg', './Images/Dé/DICE 4.svg', './Images/Dé/DICE 5.svg', './Images/Dé/DICE 6.svg']
-const altArray = ['dé-3D', 'lancer-dé-0', 'lancer-dé-1', 'lancer-dé-2', 'lancer-dé-3', 'lancer-dé-4', 'lancer-dé-5', 'lancer-dé-6']
+const altArray = ['dé-3D', 'lancer-dé-1', 'lancer-dé-2', 'lancer-dé-3', 'lancer-dé-4', 'lancer-dé-5', 'lancer-dé-6']
 
 // icones actif / vainqueur
 const activeIcon = document.getElementById('active-icon');
