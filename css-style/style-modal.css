@@ -1,0 +1,108 @@
+/* style pour smartphone - mode par DEFAUT - grille verticale */
+
+/* Modal - fond et position */
+.modal {
+    display: none;            /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    position: fixed;          /* Stay in place */
+    z-index: 1;               /* Sit on top */
+    padding: 2rem;            /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100vw;             /* Full width */
+    height: 100vh;            /* Full height */
+    overflow: auto;           /* Enable scroll if needed */
+    background-color: rgba(75, 75, 75, 0.4); /* Dark grey w/ opacity */
+}
+
+/* Modal - contenu */
+.modal-content {
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    /* width: 80vw; */
+    box-shadow: 0 4px 8px 0 rgba(75, 75, 75, 0.2), 0 6px 20px 0 rgba(75, 75, 75, 0.2);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+
+/* Animations */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: rgb(75, 75, 75);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Header */
+.modal-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0rem 1rem;
+    background-color: rgb(240, 100, 100);
+    color: white;
+}
+
+h4 {
+    font-size: 2rem;
+    color: white;
+    font-weight: 400;
+    margin: 1rem 0rem;
+}
+
+/* Contenu */
+.modal-body {
+    padding: 0.5rem 1rem;
+    font-size: 2rem;
+    text-align: justify;
+}
+
+/* changement taille de police pour tablette */
+@media screen and (min-width: 700px) and (orientation: portrait) {
+    .modal {
+        padding: 3rem;
+    }
+    .modal-body {
+        font-size: 3rem;
+    }
+}
+
+/* changement pour grille horizontale (laptop - dekstop) */
+@media screen and (min-width: 600px) and (orientation:landscape) {
+    .modal {
+        padding: 6rem;
+    }
+    .modal-body {
+        font-size: 1.5rem;
+    }
+}
+
+/* changement taille de police pour grand écran */
+@media screen and (min-width: 800px) and (orientation: landscape) {
+    .modal {
+        padding: 6rem;
+    }
+}
