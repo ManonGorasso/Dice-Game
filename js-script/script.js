@@ -22,3 +22,19 @@ let globalScore1 = document.getElementById('global-score-player1');
 let id2 = document.getElementById('player2');
 let currentScore2 = document.getElementById('current-score-player2');
 let globalScore2 = document.getElementById('global-score-player2');
+
+
+// création classe pour les deux joueurs
+class Player {
+    constructor(id, currentScore, globalScore) {
+        this.id = id;
+        this.currentScore = currentScore;
+        this.globalScore = globalScore;
+    }
+}
+
+const player1 = new Player(id1.innerText, parseInt(currentScore1.innerText), parseInt(globalScore1.innerText));
+const player2 = new Player(id2.innerText, parseInt(currentScore2.innerText), parseInt(globalScore2.innerText));
+
+const listOfPlayers = [player1, player2]
+let playerIndex = 0;            // par défaut, Joueur 1 commence
