@@ -1,0 +1,17 @@
+.dice-roll-animation {
+    -webkit-animation-name: animatedice;
+    -webkit-animation-duration: 1s;
+    animation-name: animatedice;
+    animation-duration: 1s;
+}
+
+/* Animations */
+@-webkit-keyframes animatedice {
+    from {transform: scale(1.1);} 
+    to {transform: scale(1);}
+}
+
+@keyframes animatedice {
+    from {transform: scale(1.1);} 
+    to {transform: scale(1);}
+}
