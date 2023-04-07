@@ -38,3 +38,11 @@ const player2 = new Player(id2.innerText, parseInt(currentScore2.innerText), par
 
 const listOfPlayers = [player1, player2]
 let playerIndex = 0;            // par défaut, Joueur 1 commence
+
+
+function restart() {
+    window.location.reload();   //force un rafraichissement de la page qui remet tous les éléments avec leur valeurs d'origine
+
+}
+
+newGame.addEventListener('click', restart);
