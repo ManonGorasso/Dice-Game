@@ -65,15 +65,15 @@ function holdScore () {
     listOfPlayers[playerIndex].currentScore = 0;
     displayScore();
     if (listOfPlayers[playerIndex].globalScore >= 100) {
-        activeIcon.src = './images/Crown.svg';
+        activeIcon.src = './Images/Icones/Crown.svg';
         activeIcon.alt = 'winner-icon';
         rollDice.removeEventListener('click', roll);
         rollDice.removeEventListener('click', animateDice);
         hold.removeEventListener('click', holdScore);
         rollDice.setAttribute('disabled', 'true');
         hold.setAttribute('disabled', 'true');
-        rollDiceIcon.src = './images/ROLL DICE ICON - disabled.svg';
-        holdIcon.src = './images/HOLD ICON - disabled.svg';
+        rollDiceIcon.src = './Images/Icones/ROLL DICE ICON - disabled.svg';
+        holdIcon.src = './Images/Icones/HOLD ICON - disabled.svg';
     }
     else {
         changePlayer(); // changer de joueur
