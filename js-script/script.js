@@ -45,4 +45,44 @@ function restart() {
 
 }
 
+function roll () {
+    let diceRoll = Math.floor(Math.random() * 6) + 1;
+    // pour changer image
+    diceImage.src = imgArray[diceRoll];
+    diceImage.alt = altArray[diceRoll];
+
+    listOfPlayers[playerIndex].currentScore += diceRoll;
+    displayScore();
+    if (diceRoll == 1) {
+        listOfPlayers[playerIndex].currentScore = 0;
+        displayScore();
+        changePlayer(); // changer de joueur
+    }
+}
+
+// change le joueur actif
+function changePlayer () {
+    if (playerIndex == 0) {
+        playerIndex = 1; 
+        id1.classList.remove('active');                     // supprimer actif de ce joueur
+        id2.classList.add('active');                        // ajouter actif sur l'autre joueur
+        id2.insertAdjacentElement('afterend', activeIcon);  // déplacer icone de joueur actif
+    }
+    else if (playerIndex == 1) {
+        playerIndex = 0;
+        id2.classList.remove('active');
+        id1.classList.add('active');
+        id1.insertAdjacentElement('afterend', activeIcon);
+    }
+}
+
+// fait apparaitre les scores
+function displayScore () {
+    currentScore1.innerText = player1.currentScore;
+    globalScore1.innerText = player1.globalScore;
+    currentScore2.innerText = player2.currentScore;
+    globalScore2.innerText = player2.globalScore;
+}
+
 newGame.addEventListener('click', restart);
+rollDice.addEventListener('click', roll);
